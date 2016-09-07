@@ -33,5 +33,13 @@ def otu(image):
                 image_after[i][j] = 0
             else:
                 image_after[i][j] = 255
-
+                
     return image_after
+
+if __name__ == '__main__':
+    print 'Input Image Filename :'
+    input = raw_input()
+    print 'Output Image Filename :'
+    output = raw_input()
+    image = cv2.imread(input, 0)
+    cv2.imwrite(output, otu(image))
